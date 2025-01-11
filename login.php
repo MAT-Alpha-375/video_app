@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
             $_SESSION['logged_in'] = true;
-            header("Location: index.php");
+            header("Location: view.php");
             exit();
         }
     }
@@ -35,7 +35,22 @@ if (isset($_POST['submit'])) {
         rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
+<style>
+    /* Set text color to black when input fields are not focused or hovered */
+    .form-control {
+        background-color: transparent !important;
+        /* Text color when not hovered or focused */
+    }
+
+    /* Retain default behavior on hover and focus (default Bootstrap styling) */
+    .form-control:hover,
+    .form-control:focus {
+        color: inherit;
+        /* Retain the default color during hover and focus */
+    }
+</style>
 
 <body class="img js-fullheight" style="background-image: url(assets/images/bg.jpg);">
     <!-- <form action="login.php" method="post">

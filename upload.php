@@ -37,4 +37,4 @@ if (isset($_POST['submit']) && isset($_FILES['my_video'])) {
         $error = "An error occurred during upload";
     }
 }
-header("Location: index.php?error=" . urlencode($error));
+header("Location: home.php?error=" . urlencode($error));

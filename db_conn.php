@@ -1,8 +1,9 @@
 <?php
-$servername = "videoapplicationdb.database.windows.net";
-$username = "Ahsan";
-$password = "Alpha@718";
-$dbname = "videoappdb";
+// $servername = "videoapplicationdb.database.windows.net";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "video_app";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

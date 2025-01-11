@@ -1,0 +1,18 @@
+DirectoryIndex home.php
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
+
+# Change index.php to home
+DirectoryIndex home.php
+
+# Redirect requests for /index to /home (optional, if users type index)
+RewriteRule ^index$ home [L,R=301]
+
+# Handle 404 errors gracefully (optional)
+ErrorDocument 404 /404.php
